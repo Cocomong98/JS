@@ -18,7 +18,6 @@ function solution(strings, n) {
                 answer.push(strings[j]);
                 // strings와 index에서는 해당 글자 삭제 (중복 방지)
                 strings.splice(j, 1);
-                // console.log(strings);
                 break;
             }
         }
