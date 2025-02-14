@@ -14,3 +14,22 @@ function solution(array, commands) {
 
     return sol;
 }
+
+// ========================================================================
+
+function solution(array, commands) {
+    var sol = [];
+
+    for (var i = 0; i < commands.length; i++) {
+        // 배열 자르기
+        let answer = array.slice(commands[i][0] - 1, commands[i][1]);
+
+        // 숫자 정렬
+        answer.sort((a, b) => a - b);
+
+        // k번째 숫자 추가 (배열은 0-based 인덱스이므로 -1 해줘야 함)
+        sol.push(answer[commands[i][2] - 1]);
+    }
+
+    return sol;
+}
