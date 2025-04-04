@@ -23,5 +23,6 @@ function solution(strings, n) {
             }
         }
     }
+    // 결과값 출력
     return answer;
 }
